@@ -1,0 +1,79 @@
+
+body {
+  margin: 0;
+  background: url('https://i.imgur.com/NLfPxVI.jpg') repeat;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.wall {
+  padding: 40px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.lamp {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(ellipse at center, rgba(255,239,184,0.8) 0%, rgba(0,0,0,0) 80%);
+  animation: flicker 4s infinite alternate;
+  transform: translateX(-50%);
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  3% { opacity: 0.6; }
+  6% { opacity: 0.8; }
+  9% { opacity: 0.3; }
+  12% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 90%;
+  max-width: 600px;
+  height: 80px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ffdd57;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.note {
+  background: #fff8dc;
+  color: #111;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  transform: rotateZ(var(--rotate));
+  word-break: break-word;
+}
