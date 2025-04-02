@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  background: url('https://i.imgur.com/NLfPxVI.jpg') repeat;
+  background: url('https://i.imgur.com/8H9kzGP.jpg') repeat;
   background-size: cover;
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
@@ -11,6 +11,7 @@ body {
   padding: 40px;
   position: relative;
   min-height: 100vh;
+  background-color: rgba(0,0,0,0.6);
 }
 
 .lamp {
@@ -19,9 +20,10 @@ body {
   left: 50%;
   width: 100px;
   height: 100px;
-  background: radial-gradient(ellipse at center, rgba(255,239,184,0.8) 0%, rgba(0,0,0,0) 80%);
+  background: radial-gradient(circle, rgba(255,239,184,0.8) 0%, rgba(0,0,0,0) 80%);
   animation: flicker 4s infinite alternate;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
 @keyframes flicker {
